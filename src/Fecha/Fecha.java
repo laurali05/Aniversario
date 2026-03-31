@@ -6,8 +6,8 @@ public class Fecha {
 	private LocalDate aniversario;
 	private LocalDate hoy;
 
-	public Fecha (int año, int mes, int dia) {
-		this.aniversario = LocalDate.of(año, mes, dia);
+	public Fecha (int dia, int mes, int año) {
+		this.aniversario = LocalDate.of(dia, mes, año);
 		this.hoy = LocalDate.now();
 	}
 
