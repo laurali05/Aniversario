@@ -6,27 +6,27 @@ import java.io.IOException;
 public class Main {
     // Todo programa Java empieza a ejecutar aquí
     public static void main(String[] args) {
-        
-        // 1. Asegúrate de que la carpeta existe antes de crear los archivos
-        File directorio = new File("Archivos/Cartas");
+
+        // 1. Definimos la ruta exacta (con src/)
+        String rutaCarpeta = "src/Archivos/Correos/";
+
+        File directorio = new File(rutaCarpeta);
         if (!directorio.exists()) {
-            directorio.mkdirs(); // Esto crea la carpeta si no existe
+            directorio.mkdirs();
         }
 
-        // 2. Tu bucle para crear los 365 archivos
         for (int i = 1; i <= 365; i++) {
-            File archivo = new File("Archivos/Cartas/" + i + ".txt");
+            // 2. Usamos la misma ruta para el archivo
+            File archivo = new File(rutaCarpeta + i + ".txt");
             try {
                 if (archivo.createNewFile()) {
-                    System.out.println("Creado con éxito: " + i + ".txt");
+                    System.out.println("Creado en src: " + i + ".txt");
                 }
             } catch (IOException e) {
-                System.err.println("Error al crear el archivo " + i);
                 e.printStackTrace();
             }
         }
-        
+
         System.out.println("¡Proceso finalizado!");
     }
 }
-
