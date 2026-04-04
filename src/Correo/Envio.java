@@ -38,7 +38,7 @@ public class Envio {
             String mensajePersonalizado = miLector.leerCuerpoDelDia(diaActual);
 
             // 2. Montamos el cuerpo del email
-            String urlWeb = "https://tu-usuario.github.io/tu-repositorio/";
+            String urlWeb = "https://laurali05.github.io/Diario-2026/";
             String cuerpoFinal = mensajePersonalizado + "\n\n" +
                     "Entra aquí para ver el detalle de hoy: " + urlWeb;
 

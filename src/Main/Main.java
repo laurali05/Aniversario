@@ -9,7 +9,7 @@ public class Main {
 
         try {
             // 1. Creamos el objeto fecha con el día que empezó todo
-            Fecha contador = new Fecha(3, 8, 2026); 
+            Fecha contador = new Fecha(3, 4, 2026); 
             
             // 2. Calculamos cuántos días han pasado
             int diaHoy = contador.diasEntreFechas();
