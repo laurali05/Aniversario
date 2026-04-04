@@ -1,12 +1,17 @@
 package Archivos;
 
-import java.util.Scanner;
-import java.io.File;
+import java.nio.file.*;
+import java.io.IOException;
 
 public class Lector {
-
-    public void leerCarta(int dia){
-        String ruta = "src/Archivos/Correos/" + dia + ".txt";
-    }
     
+    public String leerCuerpoDelDia(int dia) {
+        try {
+            // Asegúrate de que esta carpeta existe en la raíz de tu proyecto
+            Path ruta = Paths.get("mensajes_email/" + dia + ".txt");
+            return Files.readString(ruta);
+        } catch (IOException e) {
+            return "¡Hola amor! Tienes una nueva carta esperándote en nuestra web. ❤️";
+        }
+    }
 }
