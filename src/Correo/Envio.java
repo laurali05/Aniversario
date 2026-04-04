@@ -1,6 +1,5 @@
 package Correo;
 
-import Archivos.Lector;
 
 import java.util.Properties;
 import javax.mail.*;
