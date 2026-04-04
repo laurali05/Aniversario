@@ -7,7 +7,7 @@ public class Fecha {
 	private LocalDate hoy;
 
 	public Fecha (int dia, int mes, int año) {
-		this.aniversario = LocalDate.of(dia, mes, año);
+		this.aniversario = LocalDate.of(año, mes, dia);
 		this.hoy = LocalDate.now();
 	}
 
