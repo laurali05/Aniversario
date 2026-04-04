@@ -39,7 +39,7 @@ public class Envio {
 
             // 2. Montamos el cuerpo del email
             // Dentro de tu try en Envio.java
-            String urlWeb = "https://laurali05.github.io/Diario-2026/index.html?dia=" + diaActual;
+            String urlWeb = "https://laurali05.github.io/Diario-2026/?seccion=lectura&dia=" + diaActual;
             String cuerpoFinal = mensajePersonalizado + "\n\n" +
                     "Puedes leer tu carta detallada aquí: " + urlWeb;
 
