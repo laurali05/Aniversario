@@ -38,10 +38,12 @@ public class Envio {
             String mensajePersonalizado = miLector.leerCuerpoDelDia(diaActual);
 
             // 2. Montamos el cuerpo del email
-            String urlWeb = "https://laurali05.github.io/Diario-2026/";
+            // Dentro de tu try en Envio.java
+            String urlWeb = "https://laurali05.github.io/Diario-2026/index.html?dia=" + diaActual;
             String cuerpoFinal = mensajePersonalizado + "\n\n" +
-                    "Entra aquí para ver el detalle de hoy: " + urlWeb;
+                    "Puedes leer tu carta detallada aquí: " + urlWeb;
 
+            // Importante: asegúrate de que el link sea lo último o esté bien separado
             message.setText(cuerpoFinal);
 
             // 4. Enviar
