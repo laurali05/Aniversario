@@ -1,6 +1,7 @@
 package Fecha;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Fecha {
 	private LocalDate aniversario;
@@ -11,21 +12,17 @@ public class Fecha {
 		this.hoy = LocalDate.now();
 	}
 
-	public int diasEntreFechas(){
-		int dias = -1;
-		if((aniversario.getYear() == hoy.getYear()) && (aniversario.getDayOfYear() == hoy.getDayOfYear())){
-			dias = 0;
-		} else if ((aniversario.getYear() == hoy.getYear()) && (aniversario.getDayOfYear() != hoy.getDayOfYear())){
-			if(hoy.getDayOfYear() > aniversario.getDayOfYear()){
-				dias = hoy.getDayOfYear() - aniversario.getDayOfYear();
-			} else {
-				dias = -1;
-				System.err.println("Error, el aniversario aún no ha tenido lugar");
-			}
-		} else if ((aniversario.getYear() != hoy.getYear())){
-			dias = (aniversario.lengthOfYear() - aniversario.getDayOfYear()) + hoy.getDayOfYear();
-		}
-		return dias;
-	}
+	public int diasEntreFechas() {
+        // Calcula exactamente la diferencia en días reales entre ambas fechas
+        long dias = ChronoUnit.DAYS.between(aniversario, hoy);
+        
+        // Si hoy es anterior a la fecha del aniversario, devolvemos -1
+        if (dias < 0) {
+            System.err.println("Error, el aniversario aún no ha tenido lugar");
+            return -1;
+        }
+        
+        return (int) dias;
+    }
 }
 
