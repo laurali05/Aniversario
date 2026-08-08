@@ -1,6 +1,5 @@
 package Correo;
 
-
 import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.*;
@@ -29,6 +28,7 @@ public class Envio {
             message.setFrom(new InternetAddress(miCorreo));
             // Cambia esto por el email de tu novio
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("dacfozaneldi@gmail.com"));
+           // message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("lopeizquierd@gmail.com"));
 
             message.setSubject("💌 Día " + diaActual + ": Un nuevo detalle te espera");
 
