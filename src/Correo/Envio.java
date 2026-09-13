@@ -27,8 +27,8 @@ public class Envio {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(miCorreo));
             // Cambia esto por el email de tu novio
-            //message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("dacfozaneldi@gmail.com"));
-           message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("lopeizquierd@gmail.com"));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("dacfozaneldi@gmail.com"));
+           // message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("lopeizquierd@gmail.com"));
 
             message.setSubject("💌 Día " + diaActual + ": Un nuevo detalle te espera");
 
