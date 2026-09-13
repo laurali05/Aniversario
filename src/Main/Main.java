@@ -13,7 +13,7 @@ public class Main {
             
             // 2. Calculamos cuántos días han pasado
             //int diaHoy = contador.diasEntreFechas();
-            int diaHoy =  8;
+            int diaHoy =  9;
 
             if (diaHoy < 0) {
                 System.out.println("Aún no ha llegado el gran día.");
